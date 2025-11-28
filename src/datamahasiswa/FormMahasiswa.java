@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package aplikasisekolah;
+package datamahasiswa;
 import java.awt.HeadlessException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -56,17 +56,17 @@ public class FormMahasiswa extends javax.swing.JFrame {
         tampilkanData(); // 3. Munculkan datanya
     }
         
-        private void koneksiDatabase() {
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            String url = "jdbc:mysql://localhost:3306/sekolah"; 
-            String user = "root";
-            String pass = ""; 
-            conn = DriverManager.getConnection(url, user, pass);
-        } catch (ClassNotFoundException | SQLException e) {
-            JOptionPane.showMessageDialog(this, "Koneksi Gagal: " + e.getMessage());
-        }
+private void koneksiDatabase() {
+    try {
+        Class.forName("com.mysql.cj.jdbc.Driver");
+        String url = "jdbc:mysql://localhost:3306/mahasiswa_db";
+        String user = "root";
+        String pass = ""; 
+        conn = DriverManager.getConnection(url, user, pass);
+    } catch (ClassNotFoundException | SQLException e) {
+        JOptionPane.showMessageDialog(this, "Koneksi Gagal: " + e.getMessage());
     }
+}
 
     private void tampilkanData() {
         model.setRowCount(0); // Reset tabel biar bersih dulu

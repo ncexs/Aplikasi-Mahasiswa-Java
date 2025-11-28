@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package aplikasisekolah;
+package datamahasiswa;
 import java.awt.HeadlessException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -19,20 +19,18 @@ public class FormLogin extends javax.swing.JFrame {
     // Variabel untuk menyimpan koneksi
     Connection conn;
     
-    private void koneksiDatabase() {
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            // Pastikan nama database adalah 'sekolah' sesuai yang dibuat di phpMyAdmin
-            String url = "jdbc:mysql://localhost:3306/sekolah"; 
-            String user = "root";
-            String pass = ""; 
-            
-            conn = DriverManager.getConnection(url, user, pass);
-            System.out.println("Koneksi berhasil!");
-        } catch (ClassNotFoundException | SQLException e) {
-            JOptionPane.showMessageDialog(this, "Koneksi gagal: " + e.getMessage());
-        }
+private void koneksiDatabase() {
+    try {
+        Class.forName("com.mysql.cj.jdbc.Driver");
+        String url = "jdbc:mysql://localhost:3306/mahasiswa_db";
+        String user = "root";
+        String pass = ""; 
+        conn = DriverManager.getConnection(url, user, pass);
+        System.out.println("Koneksi berhasil!");
+    } catch (ClassNotFoundException | SQLException e) {
+        JOptionPane.showMessageDialog(this, "Koneksi gagal: " + e.getMessage());
     }
+}
     
     private void login() {
         try {

@@ -2,13 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package aplikasisekolah;
+package datamahasiswa;
 
 /**
  *
  * @author NCEX'S
  */
-public class AplikasiSekolah {
+public class AplikasiDataMahasiswa {
 
     /**
      * @param args the command line arguments
