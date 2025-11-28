@@ -61,3 +61,45 @@ CREATE TABLE users (
 -- 3. Isi Data Login Default (Gunakan 'admin' agar konsisten dengan aplikasi)
 INSERT INTO users (username, password) VALUES
 ('admin', 'admin');
+```
+
+### 3. Import Proyek ke NetBeans
+
+1. NetBeans → **File → Open Project**
+2. Pilih folder **AplikasiDataMahasiswa**
+3. Tambahkan library:
+   - Klik kanan **Libraries**
+   - Pilih **Add JAR/Folder**
+   - Tambahkan:
+     - `mysql-connector-java.jar`
+     - `itextpdf-5.5.0.jar`
+4. Jalankan aplikasi (**F6**)
+
+**Login Default**
+- Username: `admin`
+- Password: `admin`
+
+### 4. Mengatur Login sebagai Main Class di NetBeans
+
+1. **Buka Properties Projek**
+   - Di jendela **Projects**, klik kanan proyek **AplikasiDataMahasiswa**
+   - Pilih **Properties**
+
+2. **Pilih Menu Run**
+   - Pada jendela **Project Properties**, pilih kategori **Run**
+
+3. **Set Main Class**
+   - Pada bagian **Main Class**, masukkan:
+     
+     `datamahasiswa.FormLogin`
+
+   - Atau klik **Browse…** lalu pilih **FormLogin**
+
+4. **Simpan**
+   - Klik **OK**
+
+---
+
+### Hasil Akhir
+
+Setelah langkah ini, setiap Anda menekan **Run Project (F6)**, aplikasi akan **selalu dimulai dari FormLogin**, sebelum masuk ke form utama (`FormMahasiswa.java`).
